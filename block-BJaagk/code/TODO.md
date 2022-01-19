@@ -9,6 +9,14 @@ function percentage(marks, total) {
 let percntage = function per(marks,total){
   return (marks * 100) / total;
 }
+
+let percntage = function(marks,total){
+  return (marks * 100) / total;
+}
+
+let percentage = (marks, total) => {
+  return (marks * 100) / total;
+};
 ```
 
 2. Write Function Declaration or Function Expression next to the function.
@@ -17,29 +25,32 @@ let percntage = function per(marks,total){
 function percentage(marks, total) {
   return (marks * 100) / total;
 }
-// Your answer
+// function declaration
+
 ```
 
 ```js
 let percentage = function percentage(marks, total) {
   return (marks * 100) / total;
 };
+//function expression 
 ```
 
 ```js
 let percentage = function (marks, total) {
   return (marks * 100) / total;
-};
+};//function expression 
 ```
 
 ```js
 let percentage = (marks, total) => {
   return (marks * 100) / total;
-};
+};//function expression 
 ```
 
 ```js
 let percentage = (marks, total) => (marks * 100) / total;
+//function expression 
 ```
 
 3. Why is a function definition an expression in JavaScript? Give one example of function expression.
@@ -54,23 +65,20 @@ function add(a, b) {
   return a + b;
 }
 
-let five = add(2, 3); // Answer 5 its called the function that returns add a+b;
-five = add; // Answer 
-// add(a, b) {
-//   return a + b;
-// }
-five = five(10, 11); // Answer 21
+let five = add(2, 3); //  5 valid
+five = add; // valid
+five = five(10, 11); // 21 valid
 five = function () {
   return 'Hello';
-}; // Answer
-// ƒ (){
-// return "hello";
-// }
+}; // valid
 ```
 
 6. What is the difference between function definition and function call? Explain with an example.
+ the function defination is the proce of steps to function and function call is the executing that function by calling
 
 7. What is the similarities between function definition and function call?
+  A function definition is the same as a function call
+  a particular result while function call is using this function to achive that task
 
 8. Is the code below valid or invalid. Explain with reason.
 
@@ -79,9 +87,12 @@ function hello() {
   console.log('Hello World!');
 }
 
-hello.user = 'Sam'; // valid or invalid
+hello.user = 'Sam'; // its a valid code
 ```
 
 9. What is higher order function explain with an example.
+  Higher-order functions are functions that take other functions as arguments or return functions as their results.
+  eg: sort, reduce, filter, forEach are other examples of higher-order functions built into the language.
 
 10. Explain what is callback function. Why you can pass a function inside a function?
+  A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. ... A good example is the callback functions executed inside a . then() block chained onto the end of a promise after that promise fulfills or rejects
