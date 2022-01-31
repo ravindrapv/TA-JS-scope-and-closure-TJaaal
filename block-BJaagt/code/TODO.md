@@ -6,7 +6,7 @@ Example:
 function hello() {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // output is it will throw error username is not defined becuse we didnot call the function
 ```
 
 In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
@@ -21,6 +21,9 @@ The above code will throw an error `Reference Error username is not defined`.
 }
 console.log(useranme); // output
 ```
+in the above code we are looking for variable named `username` ther is no variable found due to its a block scope `const` is only globale scope so it canrt access the block scope variable const so
+it will thogh an error
+The above code will throw an error `Reference Error username is not defined`.
 
 3. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
