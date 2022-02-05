@@ -1,24 +1,22 @@
 1. Create a function by your choice that accepts a callback function.
 ```js
-function add(a,b){
-  return function(a,b){
-    return a + b;
-  }
+function add(cb){
+  return cb(10);
 }
-add(500,400);
+add(function adding(num){
+  return num+10;
+});
 ```
 2. Create a function by you choice that returns a function reference.
+
 ```js
-function Fname(name,cb){
-  return name
+function add(cb){
+  function adding(num){
+  return num+10;
 }
-
-function Lname(Nanme){
-  return Fname;
+  return adding;
 }
-
-Fname("ravindra");
-Lname();
+add();
 ```
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
@@ -34,7 +32,7 @@ function map(array,cb){
     const elements = array[i];
     final.push(cb(elements));
   }
-  return multiplyByTwo();
+  return final;
 }
 // Test Your Code
 function multiplyByTwo(n) {
@@ -50,7 +48,9 @@ multiplyByTwo(2); //-> 4
 ```js
 // Your code goes here
 function forEach(array, callback) {
-
+  for(let ele of array) {
+    callback(ele);
+  }
 }
 // Test Your Code
 let alphabet = '';
@@ -66,11 +66,14 @@ console.log(alphabet); //prints 'abcd'
 ```js
 // Test Your Code
 function filter(arr, callback) {
-  if(numbers %2 === 0){
-    return truthy
-  }else{
-    return false;
+  let final = [];
+  for(let ele of arr) {
+    if(callback(ele)){
+      final.push(ele);
+    }
+    callback(ele);
   }
+return final
 }
 var numbers = [1, 3, 5, 4, 7, 89, 234, 20];
 let even = filter(numbers, function (n) {
