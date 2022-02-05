@@ -5,11 +5,16 @@
 - It should work exactly like array `forEach` method
 
 ```js
-function forEach() {}
+function forEach(array, callback) {
+  for(let element of array) {
+    callback(element);
+  }
+}
 
 forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
   console.log(name + name, i, arr)
 );
+
 ```
 
 2. Implement `map` array method using Array.reduce
@@ -19,8 +24,12 @@ forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
 - It should work exactly like array `map` method
 
 ```js
-function map() {
-  // Your code goes here
+function map(arr , callback) {
+let final = [];
+for(let ele of arr) {
+  final.push(callback(ele));
+}
+return final;
 }
 
 map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'AryaArya']
@@ -33,7 +42,7 @@ map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'Ary
 - It should work exactly like array `filter` method
 
 ```js
-function filter() {
+function filter(arr , callback) {
   // Your code goes here
 }
 filter(['Sam', 'Jon', 'Arya'], (name) =>
