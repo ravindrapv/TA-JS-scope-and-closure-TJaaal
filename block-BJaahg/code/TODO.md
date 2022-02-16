@@ -14,6 +14,7 @@ console.log(
   window.lastName,
   window.knownAs
 );
+// undefined undefined no one 
 ```
 
 2. Guess the output:
@@ -28,41 +29,44 @@ function fullName(a, b) {
 }
 
 console.log(window.fullName(firstName, lastName));
+// AryaStark 
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var one = addOne(0);
 var two = addOne(1);
 console.log(one, two);
+// o/p is 1,2; 
 ```
+![image](../code/img/img1.png);
 
 4. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
 var one = addOne(0);
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
 console.log(one, two);
 ```
-
+![image](../code/img/img2.png);
 5. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
 console.log(addOne(0));
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
 console.log(two);
 ```
-
+![image](../code/img/img3.png);
 6. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -73,7 +77,7 @@ const addOne = (num) => {
 var two = addOne(1);
 console.log(two);
 ```
-
+![image](../code/img/img4.png);
 7. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -84,7 +88,7 @@ const addOne = (num) => {
 var two = addOne(1);
 console.log(two);
 ```
-
+![image](../code/img/img4.png);
 8. What will be the output of the following
 
 ```js
